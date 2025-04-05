@@ -52,8 +52,8 @@ export default function Registro() {
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
-      {/* Header consistente con Login */}
-      <header className="bg-[#1a2d6b] py-5 px-6 md:px-12 flex items-center justify-between border-b border-blue-800">
+      {/* Header consistente con Login - Modificado para ser responsive */}
+      <header className="bg-[#1a2d6b] py-5 px-4 sm:px-6 md:px-12 flex flex-col sm:flex-row items-center justify-between border-b border-blue-800 gap-4">
         <Link to="/" className="flex items-center space-x-3">
           <img 
             src="https://i.postimg.cc/d3Z1C30p/loCVHOME.png" 
@@ -62,14 +62,14 @@ export default function Registro() {
           />
           <span className="text-white font-bold text-2xl">CVClean</span>
         </Link>
-        <div className="flex items-center space-x-6">
-          <Link to="/login" className="text-white hover:text-blue-200 flex items-center space-x-1 transition-colors duration-200">
+        <div className="flex items-center space-x-4 sm:space-x-6">
+          <Link to="/login" className="text-white hover:text-blue-200 flex items-center space-x-1 transition-colors duration-200 text-sm sm:text-base">
             <FiCheck className="text-lg" />
-            <span>Iniciar Sesión</span>
+            <span className="hidden sm:inline">Iniciar Sesión</span>
           </Link>
-          <Link to="/registro" className="bg-white text-[#1a2d6b] px-5 py-2.5 rounded-lg hover:bg-gray-50 transition-all duration-200 shadow-sm hover:shadow-md flex items-center space-x-1">
+          <Link to="/registro" className="bg-white text-[#1a2d6b] px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-lg hover:bg-gray-50 transition-all duration-200 shadow-sm hover:shadow-md flex items-center space-x-1 text-sm sm:text-base">
             <FiUser className="text-lg" />
-            <span>Registrarse</span>
+            <span className="hidden sm:inline">Registrarse</span>
           </Link>
         </div>
       </header>
