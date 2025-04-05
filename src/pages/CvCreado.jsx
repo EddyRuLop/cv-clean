@@ -28,6 +28,7 @@ export default function CvCreado() {
   const [editingEst, setEditingEst] = useState(null);
   const [newDescripcion, setNewDescripcion] = useState('');
 
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setCvData(prev => ({ ...prev, [name]: value }));
