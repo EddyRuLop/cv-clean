@@ -1,11 +1,10 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import Chat from './pages/cv-creation/Chat.jsx'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import './index.css'; // Asegúrate de que este archivo exista y tenga los estilos necesarios
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <Chat />
-  </StrictMode>,
-)
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App /> {/* El Router ya está dentro de App */}
+  </React.StrictMode>
+);
