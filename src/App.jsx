@@ -18,9 +18,7 @@ function App() {
         <Route path="/chat" element={<Chat />} /> 
         <Route path="/plantillas" element={<Plantillas />} /> 
         <Route path="/cvcreado/:templateId" element={<CvCreado />} />
-        <Route path="/pdf/:templateId" element={<PDF />} /> {/* Asegúrate de que este componente exista */}
-        {/* Puedes agregar más rutas aquí según sea necesario */}
-        
+        <Route path="/pdf" element={<PDF />} /> 
       </Routes>
     </Router>
   );

@@ -152,7 +152,8 @@ export default function CvCreado() {
 
   // Función para convertir a PDF
   const handleConvertToPDF = () => {
-    navigate('/PDF');
+    // Pasar los datos del CV como estado de navegación
+    navigate('/pdf', { state: { cvData } });
   };
 
   // Opciones para selects
@@ -672,12 +673,11 @@ export default function CvCreado() {
 
         {/* Botón para convertir a PDF */}
         <div className="mt-8 flex justify-center">
-          <button
+          <button 
             onClick={handleConvertToPDF}
-            className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-md flex items-center gap-2 transition-colors"
+            className="flex items-center gap-2 bg-red-600 text-white px-6 py-3 rounded-md hover:bg-red-700 transition"
           >
-            <FaFilePdf />
-            Convertir a PDF
+            <FaFilePdf /> Generar PDF
           </button>
         </div>
       </div>
